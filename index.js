@@ -15,7 +15,9 @@ module.exports = {
                 throw new Error(`Invalid range "${n}-${end}"`);
             }
             while (n <= end) {
-                numbers.push(n);
+                if (numbers.indexOf(n) === -1) {
+                    numbers.push(n);
+                }
                 n++;
             }
         }
@@ -32,7 +34,7 @@ module.exports = {
         numbers.sort(sortNumber);
         numbers.push(0);
         numbers.forEach(function (n) {
-            if (!prevN || prevN !== n - 1) {
+            if (!prevN || !n || prevN < n - 1) {
                 if (currentItem) {
                     if (currentItem !== prevN.toString()) {
                         currentItem += '-' + prevN;
