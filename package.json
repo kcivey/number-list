@@ -2,12 +2,22 @@
   "name": "number-list",
   "version": "0.0.1",
   "description": "Node module for converting lists of numbers (usually page numbers) from strings to arrays and vice versa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kcivey/number-list.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "author": "Keith C. Ivey <keith@iveys.org>",
+  "author": {
+    "name": "Keith C. Ivey",
+    "email": "keith@iveys.org"
+  },
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kcivey/number-list/issues"
+  },
   "devDependencies": {
     "eslint": "^5.15.0",
     "eslint-config-google": "^0.12.0",
