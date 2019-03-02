@@ -49,7 +49,7 @@ describe(
                             NumberList.parse(arg);
                         },
                         regexp
-                    )
+                    );
                 }
             );
         }
