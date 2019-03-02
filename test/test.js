@@ -10,6 +10,7 @@ describe(
                     [[1], '1'],
                     [[1, 2, 3], '1-3'],
                     [[3, 1, 2], '1-3'],
+                    [['1', '2', '3'], '1-3'],
                     [[], ''],
                     [[10, 6, 7, 6, 10], '6-7, 10'],
                 ];
@@ -18,6 +19,35 @@ describe(
                         `${JSON.stringify(arg)} should become "${expected}"`,
                         function () {
                             assert.strictEqual(NumberList.stringify(arg), expected);
+                        }
+                    );
+                }
+            }
+        );
+        describe(
+            'errors',
+            function () {
+                const tests = [
+                    [[1, 'x'], /Invalid number/],
+                    [[1.1], /Invalid number/],
+                    [[0], /Invalid number/],
+                    [[-1], /Invalid number/],
+                    [[''], /Invalid number/],
+                    [[null], /Invalid number/],
+                    [[true], /Invalid number/],
+                    [[1234567], /Invalid number/],
+                    [[1e20], /Invalid/],
+                ];
+                for (const [arg, regexp] of tests) {
+                    it(
+                        `${JSON.stringify(arg)} should throw ${regexp} error`,
+                        function () {
+                            assert.throws(
+                                function () {
+                                    NumberList.stringify(arg);
+                                },
+                                regexp
+                            );
                         }
                     );
                 }

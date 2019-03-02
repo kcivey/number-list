@@ -4,7 +4,8 @@
 
 Convert arrays of positive integers (such as page numbers) to comma-separated strings,
 with ranges represented with hyphens, or do the reverse, converting strings to arrays.
-Numbers are sorted in the output, and duplicates are removed.
+Numbers are sorted in the output, and duplicates are removed. To avoid memory problems
+(and because this is designed for page numbers), the integers must be less than 1 million.
 
 ## Installation
 
