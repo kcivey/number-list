@@ -15,7 +15,6 @@ module.exports = {
                 throw new Error(`Invalid range "${n}-${end}"`);
             }
             while (n <= end) {
-                console.log(n);
                 numbers.push(n);
                 n++;
             }
