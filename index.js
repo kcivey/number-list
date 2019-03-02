@@ -1,14 +1,11 @@
-function sortNumber(a, b) {
-    return a - b;
-}
-
+const sortNumber = (a, b) => a - b;
 const numberPattern = '[1-9]\\d{0,5}';
 const singleNumberRegExp = new RegExp(`^${numberPattern}$`);
 const numberListRegExp = new RegExp(`^\\s*(${numberPattern})(?:\\s*-\\s*(${numberPattern}))?(?:,\\s*|\\s+|$)`);
 
 module.exports = {
 
-    parse: function (s) {
+    parse(s) {
         const numbers = [];
         let m;
         while ((m = s.match(numberListRegExp))) {
@@ -31,7 +28,7 @@ module.exports = {
         return numbers.sort(sortNumber);
     },
 
-    stringify: function (numbers) {
+    stringify(numbers) {
         numbers = numbers.map(function (n) {
             if (!singleNumberRegExp.test(n)) {
                 throw new Error(`Invalid number "${n}"`);
@@ -44,7 +41,7 @@ module.exports = {
         numbers.sort(sortNumber);
         numbers.push(0);
         numbers.forEach(function (n) {
-            if (!prevN || !n || prevN < n - 1) {
+            if (!prevN || !n || n > prevN + 1) {
                 if (currentItem) {
                     if (currentItem !== prevN.toString()) {
                         currentItem += '-' + prevN;
