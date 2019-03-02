@@ -35,5 +35,23 @@ describe(
                 }
             );
         }
+        const errorTests = [
+            ['-1', /Invalid number list/],
+            ['a', /Invalid number list/],
+            ['7-5', /Invalid range/],
+        ];
+        for (const [arg, regexp] of errorTests) {
+            it(
+                `"${arg}" should throw ${regexp} error`,
+                function () {
+                    assert.throws(
+                        function () {
+                            NumberList.parse(arg);
+                        },
+                        regexp
+                    )
+                }
+            );
+        }
     }
 );
