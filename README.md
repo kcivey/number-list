@@ -1,5 +1,7 @@
 # number-list
 
+[![Build Status](https://travis-ci.org/kcivey/number-list.svg?branch=master)](https://travis-ci.org/kcivey/number-list)
+
 ## Description
 
 Convert arrays of positive integers (such as page numbers) to comma-separated strings,
