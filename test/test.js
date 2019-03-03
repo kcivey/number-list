@@ -86,6 +86,9 @@ describe(
                     ['-1', /Invalid number list/],
                     ['a', /Invalid number list/],
                     ['7-5', /Invalid range/],
+                    ['1234567', /Invalid number list/],
+                    ['123-', /Invalid number list/],
+                    ['01', /Invalid number list/],
                 ];
                 for (const [arg, regexp] of tests) {
                     it(
