@@ -18,6 +18,9 @@
   "bugs": {
     "url": "https://github.com/kcivey/number-list/issues"
   },
+  "engines" : {
+    "node" : ">=6"
+  },
   "devDependencies": {
     "eslint": "^5.15.0",
     "eslint-config-google": "^0.12.0",
