@@ -7,9 +7,16 @@
     "url": "https://github.com/kcivey/number-list.git"
   },
   "main": "index.js",
+  "keywords": [
+    "page range",
+    "number",
+    "integer",
+    "list"
+  ],
   "scripts": {
     "test": "mocha"
   },
+  "files": [],
   "author": {
     "name": "Keith C. Ivey",
     "email": "keith@iveys.org"
