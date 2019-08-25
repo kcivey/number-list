@@ -29,8 +29,8 @@
     "node": ">=6"
   },
   "devDependencies": {
-    "eslint": "^6.0.1",
+    "eslint": "^6.2.2",
     "eslint-config-google": "^0.13.0",
-    "mocha": "^6.1.4"
+    "mocha": "^6.2.0"
   }
 }
