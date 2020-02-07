@@ -1,6 +1,6 @@
 {
   "name": "number-list",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Node module for converting lists of numbers (usually page numbers) from strings to arrays and vice versa",
   "repository": {
     "type": "git",
