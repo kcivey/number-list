@@ -9,7 +9,7 @@ module.exports = {
         const numbers = [];
         let m;
         while ((m = s.match(numberListRegExp))) {
-            s = s.substr(m[0].length);
+            s = s.slice(m[0].length);
             let n = +m[1];
             const end = m[2] == null ? n : +m[2];
             if (n > end) {
